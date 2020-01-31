@@ -23,39 +23,6 @@ We recommend working with the latest available version of each.
 
 </details>
 
-## Getting Familiar with Appsody
-
-[Appsody](https://appsody.dev/) is a command-line interface for creating, building, and deploying cloud-native projects. Let's look at how to use Appsody to initialize a Spring Boot project. 
-
-Appsody uses a concept called "stacks". The appsody CLI defines a few simple commands that work with defined stacks to create, run, test, debug, build, and deploy applications to Kubernetes. To view available stacks run the following command:
-
-```
-$ appsody list
-```
-
-This prints out a list of available stacks including the repo they are being pulled from, their version, and the different types of templates. For example `java-spring-boot2` could be initialized as either a Java application "default" or a Kotlin application.
-
-```
-REPO        	ID                       	VERSION  	TEMPLATES        	DESCRIPTION                                              
-appsodyhub  	java-microprofile        	0.2.12   	*default         	Eclipse MicroProfile on Open Liberty & OpenJ9 using Maven
-appsodyhub  	java-spring-boot2        	0.3.10   	*default, kotlin 	Spring Boot using OpenJ9 and Maven                       
-appsodyhub  	nodejs                   	0.2.5    	*simple          	Runtime for Node.js applications                         
-appsodyhub  	nodejs-express           	0.2.5    	*simple, skaffold	Express web framework for Node.js                        
-appsodyhub  	nodejs-loopback          	0.1.4    	*scaffold        	LoopBack 4 API Framework for Node.js                     
-appsodyhub  	python-flask             	0.1.3    	*simple          	Flask web Framework for Python                           
-appsodyhub  	swift                    	0.1.4    	*simple          	Runtime for Swift applications                           
-experimental	java-spring-boot2-liberty	0.1.7    	*default         	Spring Boot on Open Liberty & OpenJ9 using Maven         
-experimental	nodejs-functions         	0.1.3    	*simple          	Serverless runtime for Node.js functions                 
-experimental	quarkus                  	0.1.5    	*default         	Quarkus runtime for running Java applications            
-experimental	vertx                    	0.1.1    	*default         	Eclipse Vert.x runtime for running Java applications   
-```
-
-Organizations will have their own specific needs and requirements. For which custom stacks can be created, however Appsody has several pre-defined stacks as well. To view available stacks run this command:
-
-``` 
-appsody repo add incubator https://raw.githubusercontent.com/seabaylea/stacks/javametrics-dev/index.yaml
-```
-
 ## Improving Developer Productivity with Eclipse Codewind
 
 [Eclipse Codewind](https://www.eclipse.org/codewind/) is a plugin for IDEs, currently available in VS Code, Eclipse, and Eclipse Che, that helps improve developer productivity when developing containerized applications. Let's explore how Codewind can help you be a more productive developer.
@@ -65,20 +32,19 @@ appsody repo add incubator https://raw.githubusercontent.com/seabaylea/stacks/ja
 ![](images/codewind-explorer.png)
 
 3. In the dialog pop-up search for "Spring Boot" and select the "Appsody Spring Boot default template" option
-![](images/codewind-new-project-part3.png)
+![](images/Create-cw-spring-boot.png)
 
 4. Enter **cloud-native-spring** as the project name and hit enter
 ![](images/codewind-explorer-new.png)
 
 ### Automated Code Reload
 
-A key to increasing developer productivity is shortening and reducing the friction in the feedback loop. `appsody run` will run the Spring application in the foreground, using Spring DevTools to restart the application in the container when changes have been detected. Codewind brings this appsody capability into the IDE in a familiar way.  
+A key to increasing developer productivity is shortening and reducing the friction in the feedback loop. Codewind improves your inner loop experience, enabling you to create a microservice quickly, rapidly iterate on changes and make improvements to performance. As you develop, Codewind *automatically* pushes your code changes to your container as efficiently as possible. 
 
 Let's look at this feature in action.
 
-3. In VS Code add the **cloud-native-spring** project folder to the workspace
-	![](images/add-project.png)
 4. 	In the project under **src/main/java/application** create a new file **Hello.java**
+![](images/create-hello-dot-java.gif)
 5. Edit **Hello.java** to look like below:
 	
 	```java
@@ -109,9 +75,10 @@ Let's look at this feature in action.
 	}
 	```
 6. You can view the status of the re-build and re-deploy by looking at the status indicator next to the project under the Codewind context. Once status returns to [Running][Build Suceeded] you can refresh your browser window to view the change we made. Please be aware that it can take a few seconds until something happens. 
-	![](images/project-status.png)	
-1. In VS Code click the "go to application" icon	![](images/open-project.png)
+	![](images/app-status.JPG)	
+1. In VS Code click the "Open Application" icon	
 2. Append `/v1/hello?name=Cloud%20Native%20Spring` to the end of the url
+![](images/append-url.gif)
 
 ### Viewing Application Logs
 
