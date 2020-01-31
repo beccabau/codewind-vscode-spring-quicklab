@@ -35,7 +35,7 @@ We recommend working with the latest available version of each.
 ![](images/Create-cw-spring-boot.png)
 
 4. Enter **cloud-native-spring** as the project name and hit enter
-![](images/codewind-explorer-new.png)
+![](images/name-cloud-native-spring.png)
 
 ### Automated Code Reload
 
