@@ -43,9 +43,9 @@ A key to increasing developer productivity is shortening and reducing the fricti
 
 Let's look at this feature in action.
 
-4. 	In the project under **src/main/java/application** create a new file **Hello.java**
+1. 	In the project under **src/main/java/application** create a new file **Hello.java**
 ![](images/create-hello-dot-java.gif)
-5. Edit **Hello.java** to look like below:
+2. Edit **Hello.java** to look like below:
 	
 	```java
 	package application;
@@ -74,11 +74,26 @@ Let's look at this feature in action.
 	
 	}
 	```
-6. You can view the status of the re-build and re-deploy by looking at the status indicator next to the project under the Codewind context. Once status returns to [Running][Build Suceeded] you can refresh your browser window to view the change we made. Please be aware that it can take a few seconds until something happens. 
+3. You can view the status of the re-build and re-deploy by looking at the status indicator next to the project under the Codewind context. Once status returns to [Running][Build Suceeded] you can refresh your browser window to view the change we made. Please be aware that it can take a few seconds until something happens. 
 	![](images/app-status.JPG)	
-1. In VS Code click the "Open Application" icon	
-2. Append `/v1/hello?name=Cloud%20Native%20Spring` to the end of the url
+4. In VS Code click the "Open Application" icon	
+5. Append `/v1/hello?name=Cloud%20Native%20Spring` to the end of the url
 ![](images/append-url.gif)
+
+### View the Application Monitor
+
+
+### View the Performance Dashboard
+
+You can run an application and use the performance dashboard data to determine whether the application is working harder than it should. By determining which applications are running harder than necessary, the performance dashboard can help you find slower applications and detect memory leaks.
+
+You'll notice that if you try to run a load test with the default project configuration, you will not get any results on the performance dashboard. This is because not all projects will have the required packages needed to provide monitoring, Spring Boot being one of these projects. However, we provide the ability to auto inject the required configuration at build time to include these packages. You will need to opt in for this to happen as it will modify the source code (but only in the build container).
+
+1. Navigate to the Project Overview page ![](images/open-proj-overview.gif)
+2. Enable "Inject metrics" ![](images/inject-metrics.gif). Wait for the Application Status to go back to Running - it shouldn't take long.
+3. Navigate to the Performance Dashboard ![](images/open-perf-dash.gif).
+4. Now you can run a load test and monitor your application. ![](images/perf-dash.gif)
+
 
 ### Viewing Application Logs
 
@@ -89,42 +104,3 @@ To view the logs for an application, right click on it and select "Show All Logs
 ![](images/show-logs-new.png)
 
 The logs for the running application will be shown in the IDE console log window on the bottom right of the page. 
-
-### Deploying an Application to Kubernetes with Appsody 
-
-The cloud native world demands developer learn a lot of new skills that traditionally they didn't need understand before. Appsody helps to reduce this learning curve by helping with tasks like deploying to a kubernetes cluster. Let's deploy the application we have been building in this quicklab to a local kubernetes cluster!
-
-1. Make sure that you are in the correct folder before starting your minikube cluster: 
-
-	```
-	cd “~/codewind-workspace/Cloud Native Spring”
-	```
-
-1. Now we will need to start our minikube cluster:
-
-	```
-	minikube start
-	```
-
-1. Next we will need to setup docker registry for the local minikube cluster, so that minikube can pull the image we will be sending it in the next step. To do that run the following command:
-
-	```
-	eval $(minikube docker-env)
-	```
-
-1. To deploy the application we just created to a kubernetes cluster, in this case a locally running instance of [minikube](https://github.com/kubernetes/minikube), run the following command:
-
-	```
-	appsody deploy
-	``` 
-
-1. Once the deploy has completed, we will need to tell minikube to expose the service, to do this run the following command:
-
-	```
-	minikube service cloud-native-spring
-	```
-
-Minikube will expose the service and open a browser window allowing you to view the application we just deployed.
-
-Appsody and Codewind help Java developers create, build, and deploy cloud-native applications without having to be experts in cloud native development!
-
