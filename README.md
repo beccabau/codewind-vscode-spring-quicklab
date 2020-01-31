@@ -76,8 +76,8 @@ Let's look at this feature in action.
 	```
 3. You can view the status of the re-build and re-deploy by looking at the status indicator next to the project under the Codewind context. Once status returns to [Running][Build Suceeded] you can refresh your browser window to view the change we made. Please be aware that it can take a few seconds until something happens. 
 	![](images/app-status.JPG)	
-4. In VS Code click the "Open Application" icon	
-5. Append `/v1/hello?name=Cloud%20Native%20Spring` to the end of the url
+4. In VS Code click the "Open Application" icon.	
+5. Append `/v1/hello?name=Cloud%20Native%20Spring` to the end of the url.
 ![](images/append-url.gif)
 
 ### View the Application Monitor
@@ -90,8 +90,8 @@ You can run an application and use the performance dashboard data to determine w
 You'll notice that if you try to run a load test with the default project configuration, you will not get any results on the performance dashboard. This is because not all projects will have the required packages needed to provide monitoring, Spring Boot being one of these projects. However, we provide the ability to auto inject the required configuration at build time to include these packages. You will need to opt in for this to happen as it will modify the source code (but only in the build container).
 
 1. Navigate to the Project Overview page ![](images/open-proj-overview.gif)
-2. Enable "Inject metrics" ![](images/inject-metrics.gif). Wait for the Application Status to go back to Running - it shouldn't take long.
-3. Navigate to the Performance Dashboard ![](images/open-perf-dash.gif).
+2. Enable "Inject metrics." ![](images/inject-metrics.gif) Wait for the Application Status to go back to Running - it shouldn't take long.
+3. Navigate to the Performance Dashboard. ![](images/open-perf-dash.gif)
 4. Now you can run a load test and monitor your application. ![](images/perf-dash.gif)
 
 
