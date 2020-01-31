@@ -1,14 +1,12 @@
-# Spring Appsody Codewind Quicklab
+# Codewind Quicklab
 
 Moving workloads to the cloud introduces a steep learning curve for developers accustomed to traditional web application developmenr. Cloud-native applications are usually containerized (either Docker or OCI containers) and are run on orchestrated platforms like Kubernetes. These are complex technologies that bring big changes to the development workflow. Can this be simplified? Can developers create cloud-native applicatioons and deploy them to Kubernetes without climbing the mountainous learning curve? 
 
-In this quicklab we will take a look at an usecase involving "Appsody and Codewind", two technologies that simplify development of containerized cloud-native applications. Appsody provides self-contained stacks for creating, building, and deploying cloud-native applications in a consistent and customized way for teams and organizations. Eclipse Codewind is an IDE plugin that allows you to work with containerized applications in a familiar way.
-
-Appsody and Codewind allow developers to start building cloud-native applications like an expert without having to be an expert in all the cloud-native technologies. 
+In this quicklab we will take a look at an usecase involving Eclipse Codewind, a technology that simplify development of containerized cloud-native applications. Codewind is an IDE plugin that allows you to work with containerized applications in a familiar way. With Codewind, developers can start building cloud-native applications like experts without having to be an expert in all the cloud-native technologies. 
 
 ## Prerequistes
 
-If you're running this lab on your own laptop, we need to pre-install some tools.
+If you're running this lab on your own laptop, make sure you have a few things already installed.
 
 <details>
   <summary>Click to expand</summary>
@@ -17,12 +15,9 @@ If you're running this lab on your own laptop, we need to pre-install some tools
 
 This quicklab requires the following tools: 
 
-1. Install Docker
-2. Install minikube
-3. Install Appsody
-4. Install VS Code
-5. Install VS Code codewind extension
-6. Install VS Code java extension
+1. Docker
+2. VS Code
+3. VS Code Codewind [extension](https://www.eclipse.org/codewind/mdt-vsc-getting-started.html)
 
 We recommend working with the latest available version of each.
 
