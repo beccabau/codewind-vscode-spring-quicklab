@@ -80,9 +80,6 @@ Let's look at this feature in action.
 5. Append `/v1/hello?name=Cloud%20Native%20Spring` to the end of the url.
 ![](images/append-url.gif)
 
-### View the Application Monitor
-
-
 ### View the Performance Dashboard
 
 You can run an application and use the performance dashboard data to determine whether the application is working harder than it should. By determining which applications are running harder than necessary, the performance dashboard can help you find slower applications and detect memory leaks.
@@ -94,6 +91,10 @@ You'll notice that if you try to run a load test with the default project config
 3. Navigate to the Performance Dashboard. ![](images/open-perf-dash.gif)
 4. Now you can run a load test and monitor your application. ![](images/perf-dash.gif)
 
+## Other Actions
+### View the Application Monitor
+Opening the Application monitor allows you to monitor the activity and health of your application. This action is only available when the application is running or debugging.
+![](images/open-app-monitor.gif)
 
 ### Viewing Application Logs
 
