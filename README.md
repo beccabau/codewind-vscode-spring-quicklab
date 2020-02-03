@@ -2,7 +2,7 @@
 
 Moving workloads to the cloud introduces a steep learning curve for developers accustomed to traditional web application developmenr. Cloud-native applications are usually containerized (either Docker or OCI containers) and are run on orchestrated platforms like Kubernetes. These are complex technologies that bring big changes to the development workflow. Can this be simplified? Can developers create cloud-native applicatioons and deploy them to Kubernetes without climbing the mountainous learning curve? 
 
-In this quicklab we will take a look at an usecase involving Eclipse Codewind, a technology that simplify development of containerized cloud-native applications. Codewind is an IDE plugin that allows you to work with containerized applications in a familiar way. With Codewind, developers can start building cloud-native applications like experts without having to be an expert in all the cloud-native technologies. 
+In this quicklab we will take a look at an use case involving Eclipse Codewind, a technology that simplify development of containerized cloud-native applications. Codewind is an IDE plugin that allows you to work with containerized applications in a familiar way. With Codewind, developers can start building cloud-native applications like experts without having to be an expert in all the cloud-native technologies. 
 
 ## Prerequistes
 
@@ -34,7 +34,7 @@ We recommend working with the latest available version of each.
 3. In the dialog pop-up search for "Spring Boot" and select the "Appsody Spring Boot default template" option
 ![](images/Create-cw-spring-boot.png)
 
-4. Enter **cloud-native-spring** as the project name and hit enter
+4. Enter **cloud-native-spring** as the project name and hit enter. You will see a dialogue asking what parent directory you want for your projects. For the purposes of this lab, create a "codewind-workspace" directory during this step (if it does not already exist). In reality, you can choose to place the projects wherever it makes sense for you.
 ![](images/name-cloud-native-spring.png)
 
 ### Automated Code Reload
