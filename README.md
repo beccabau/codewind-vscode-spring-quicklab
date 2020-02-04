@@ -35,7 +35,7 @@ We recommend working with the latest available version of each.
 ![](images/Create-cw-spring-boot.png)
 
 4. Enter **cloud-native-spring** as the project name and hit enter. You will see a dialogue asking what parent directory you want for your projects. For the purposes of this lab, create a "codewind-workspace" directory during this step (if it does not already exist). In reality, you can choose to place the projects wherever it makes sense for you.
-![](images/name-cloud-native-spring.png)
+	![](images/name-cloud-native-spring.png)
 
 ### Automated Code Reload
 
